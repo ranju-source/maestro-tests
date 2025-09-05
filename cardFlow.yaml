@@ -1,0 +1,154 @@
+appId: io.gosats
+env: 
+   PhoneNumber: "9090909090"
+   OTP: "1234"
+   ActivateBanner: "50%,59%"
+   PanNumber: "CKBPR6048C"
+   DOB: 11111111
+   CTA: "io.gosats:id/continue"
+---
+# --------------------- LoginFlow -------------------
+# - tapOn:
+#    id: io.gosats:id/let’s_get started
+# - tapOn:
+#    id: io.gosats:id/enter_mobile_number
+# - inputText: ${PhoneNumber} 
+# - tapOn:
+#    id: io.gosats:id/get_otp
+# - inputText: ${OTP}
+
+# ----------------------- Min KYC / VCO card Purchase -----------------
+# steps:
+#    - tapOn: 
+#          point: "50%,59%"
+#    - tapOn:
+#          id: io.gosats:id/enter_your pan card number
+#    - inputText: ${PanNumber}
+#    - tapOn: " DD "
+#    - inputText: ${DOB}
+#    - tapOn:
+#          id: ${CTA}
+#    - tapOn:
+#          id: ${CTA}
+#    - tapOn:
+#          id: io.gosats:id/flat_/ house no / floor / building
+#    - inputText: 123 Example Apt
+#    - tapOn:
+#          id: io.gosats:id/area_/ sector / locality
+#    - inputText: Main Street Area
+#    - swipe:
+#          start: 49%,55%
+#          end: 51%,32%
+#          duration: 1484
+#    - tapOn:
+#          point: 50%,46%
+#    - inputText: Near Central Mall
+#    - tapOn:
+#          id: io.gosats:id/pincode
+#    - inputText: "560001"
+#    - tapOn:
+#          point: 87%,91%
+#    - tapOn:
+#          id: io.gosats:id/confirm_address
+#    - tapOn:
+#          point: 9%,23%
+#    - tapOn:
+#          id: io.gosats:id/confirm_address
+#    - inputText: "123456"
+#    - tapOn:
+#          id: io.gosats:id/continue 
+#    - tapOn:
+#          id: io.gosats:id/name_on card
+#    - inputText: RANJ
+#    - tapOn:
+#          id: io.gosats:id/confirm
+#    - tapOn:
+#          id: io.gosats:id/yes
+#    - assertVisible:
+#          id: android:id/content
+#    - tapOn: Skip
+#    - swipe:
+#          start: 49%,81%
+#          end: 51%,30%
+#          duration: 1066
+#    - tapOn:
+#          point: 88%,84%
+#    - tapOn:
+#          id: "io.gosats:id/get_physical card for ₹399"
+#    - tapOn:
+#          id: "io.gosats:id/pay_₹#{{amountpayable}} + ₹71.82 gst"
+#    - tapOn: Debit/Credit Cards, Amount loaded via PG will get credited within 12-24hrs
+#    - tapOn: Net Banking
+#    - tapOn:
+#          text: bank
+#          index: 0
+#    - tapOn: PAY NOW
+#    - tapOn: Submit Form
+#    - tapOn:
+#          id: io.gosats:id/continue
+#    - tapOn:
+#          point: 8%,82%
+#    - tapOn:
+#          id: io.gosats:id/confirm_details
+#    - tapOn: Do it Later
+#    - tapOn:
+#          point: 50%,59%
+#    - tapOn:
+#          id: io.gosats:id/confirm
+#    - tapOn:
+#          id: "io.gosats:id/pay_₹#{{amountpayable}} + ₹108 gst"
+#    - tapOn:
+#          id: "io.gosats:id/pay_₹#{{amountpayable}} + ₹108 gst"
+
+   # --------------------- Intro Card Upgrade Flow -------------------
+   - tapOn:
+      id: io.gosats:id/Upgrade to Elite Banner
+   - swipe:
+         start: 48%,85%
+         end: 53%,38%
+         duration: 1067
+   - tapOn: Get Physical Card
+   - tapOn:
+         id: io.gosats:id/get_physical card for ₹399
+   - tapOn:
+         id: io.gosats:id/pay_₹#{{amountpayable}} + ₹71.82 gst
+   - tapOn: Debit/Credit Cards, Amount loaded via PG will get credited within 12-24hrs
+   - tapOn: Net Banking
+   - tapOn:
+         point: 17%,61%
+   - tapOn: PAY NOW
+   - tapOn: Submit Form
+   - tapOn:
+         id: io.gosats:id/continue
+   - tapOn:
+         point: 8%,82%
+   - tapOn:
+         id: io.gosats:id/confirm_details
+   - tapOn: Do it Later
+
+
+# --------------------- Elite Card Upgrade Flow -------------------
+   - tapOn:
+      id: io.gosats:id/Upgrade to Elite Banner
+   - swipe:
+         start: 48%,85%
+         end: 53%,38%
+         duration: 1067
+   - tapOn: Get Physical Card
+   - tapOn:
+         id: io.gosats:id/get_physical card for ₹399
+   - tapOn:
+         id: io.gosats:id/pay_₹#{{amountpayable}} + ₹71.82 gst
+   - tapOn: Debit/Credit Cards, Amount loaded via PG will get credited within 12-24hrs
+   - tapOn: Net Banking
+   - tapOn:
+         point: 17%,61%
+   - tapOn: PAY NOW
+   - tapOn: Submit Form
+   - tapOn:
+         id: io.gosats:id/continue
+   - tapOn:
+         point: 8%,82%
+   - tapOn:
+         id: io.gosats:id/confirm_details
+   - tapOn: Do it Later

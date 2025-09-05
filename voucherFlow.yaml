@@ -1,0 +1,49 @@
+appId: io.gosats
+env: 
+   PhoneNumber: "9090909090"
+   OTP: "1234"
+   ActivateBanner: "50%,59%"
+   PanNumber: "CKBPR6048C"
+   DOB: 11111111
+   CTA: "io.gosats:id/continue"
+
+---
+# - launchApp
+# - tapOn:
+#    id: io.gosats:id/let’s_get started
+# - tapOn:
+#    id: io.gosats:id/enter_mobile_number
+# - inputText: ${PhoneNumber}
+# - tapOn:
+#    id: io.gosats:id/get_otp
+# - inputText: ${OTP}
+- tapOn: Brands
+- tapOn:
+    point: 73%,9%
+- tapOn:
+    id: io.gosats:id/search_brands
+- inputText: Uber Test
+- tapOn:
+    text: Uber Test
+    index: 1
+- retry:
+    maxRetries: 3
+    commands:
+      - tapOn:
+          point: 26%,17%
+- tapOn: ₹100
+- tapOn: Buy Voucher
+- tapOn: Debit/Credit Cards, Amount loaded via PG will get credited within 12-24hrs
+- tapOn: Net Banking
+- tapOn:
+    text: bank
+    index: 0
+- tapOn: PAY NOW
+- tapOn: Submit Form
+- tapOn:
+    point: 50%,85%
+- assertVisible: Status
+- assertVisible: Sats Earned
+- assertVisible: Payment Method
+- assertVisible: Date & Time
+- back
