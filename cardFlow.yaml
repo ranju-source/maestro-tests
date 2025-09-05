@@ -128,27 +128,27 @@ env:
 
 
 # --------------------- Elite Card Upgrade Flow -------------------
-   - tapOn:
-      id: io.gosats:id/Upgrade to Elite Banner
-   - swipe:
-         start: 48%,85%
-         end: 53%,38%
-         duration: 1067
-   - tapOn: Get Physical Card
-   - tapOn:
-         id: io.gosats:id/get_physical card for ₹399
-   - tapOn:
-         id: io.gosats:id/pay_₹#{{amountpayable}} + ₹71.82 gst
-   - tapOn: Debit/Credit Cards, Amount loaded via PG will get credited within 12-24hrs
-   - tapOn: Net Banking
-   - tapOn:
-         point: 17%,61%
-   - tapOn: PAY NOW
-   - tapOn: Submit Form
-   - tapOn:
-         id: io.gosats:id/continue
-   - tapOn:
-         point: 8%,82%
-   - tapOn:
-         id: io.gosats:id/confirm_details
-   - tapOn: Do it Later
+   # - tapOn:
+   #    id: io.gosats:id/Upgrade to Elite Banner
+   # - swipe:
+   #       start: 48%,85%
+   #       end: 53%,38%
+   #       duration: 1067
+   # - tapOn: Get Physical Card
+   # - tapOn:
+   #       id: io.gosats:id/get_physical card for ₹399
+   # - tapOn:
+   #       id: io.gosats:id/pay_₹#{{amountpayable}} + ₹71.82 gst
+   # - tapOn: Debit/Credit Cards, Amount loaded via PG will get credited within 12-24hrs
+   # - tapOn: Net Banking
+   # - tapOn:
+   #       point: 17%,61%
+   # - tapOn: PAY NOW
+   # - tapOn: Submit Form
+   # - tapOn:
+   #       id: io.gosats:id/continue
+   # - tapOn:
+   #       point: 8%,82%
+   # - tapOn:
+   #       id: io.gosats:id/confirm_details
+   # - tapOn: Do it Later
