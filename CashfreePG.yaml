@@ -1,0 +1,54 @@
+appId: io.gosats
+env:
+  PhoneNumber: '9090909090'
+  OTP: '1234'
+  ActivateBanner: '50%,59%'
+  PanNumber: 'CKBPR6048C'
+  DOB: 11111111
+  CTA: 'io.gosats:id/continue'
+---
+- launchApp:
+    clearState: true
+#*------------------Login Flow ---------------------------*
+- tapOn:
+    id: io.gosats:id/let’s_get started
+- tapOn:
+    id: io.gosats:id/enter_mobile_number
+- inputText: ${PhoneNumber}
+- tapOn:
+    id: io.gosats:id/get_otp
+- inputText: ${OTP}
+
+- tapOn: Brands
+- tapOn:
+    point: 54%,25%
+- tapOn: ₹100
+- tapOn: Buy Voucher
+- tapOn: Debit/Credit Cards, Pay with any UPI App or CC or DC
+- tapOn: Proceed to Pay
+
+#-------------------UPI-ID Payment----------------
+- tapOn: Pay using testsuccess@gocash
+- assertNotVisible: You've won
+- tapOn: io.gosats:id/hooray
+- retry:
+    maxRetries: 3
+    commands:
+      - tapOn:
+          id: 'io.gosats:id/hooray'
+- back
+- back
+
+#-------------------- Net Banking Payment ----------------
+- tapOn: ₹100
+- tapOn: ₹100
+- tapOn: ₹100
+- tapOn:
+    point: 87%,71%
+- tapOn:
+    point: 87%,71%
+
+
+
+
+

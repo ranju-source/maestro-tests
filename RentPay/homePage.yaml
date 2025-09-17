@@ -1,0 +1,143 @@
+appId: io.gosats
+---
+- assertVisible: "Earn Bitcoin or Gold on every spend"
+- assertVisible: "It's the smartest way to convert expenses into valuable assets"
+- assertVisible: "Let’s Get Started"
+- tapOn:
+    id: "android:id/content"
+- tapOn:
+    id: "io.gosats:id/let’s_get started"
+- assertVisible:
+    id: "android:id/content"
+- assertVisible: "Enter your phone number to earn Bitcoin and Gold rewards"
+- assertVisible: "(+91)"
+- assertVisible:
+    id: "io.gosats:id/enter_mobile_number"
+- tapOn:
+    id: "io.gosats:id/enter_mobile_number"
+- inputText: "8080808080"
+- assertVisible: "By signing in, you agree to our Terms and Privacy Policy."
+- assertVisible:
+    id: "android:id/content"
+- tapOn: "Get OTP"
+- assertVisible: "Please enter the OTP code below to complete verification"
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn:
+    point: "15%,28%"
+- inputText: "1234"
+- assertVisible:
+    id: "android:id/content"
+- tapOn:
+    point: "80%,38%"
+# - assertVisible: "Daily Sats Spinner"
+- assertVisible:
+    id: "android:id/content"
+# - waitForAnimationToEnd:
+#     timeout: 5000
+- tapOn:
+    point: "80%,38%"
+- tapOn:
+    id: "io.gosats:id/spin_for sats"
+- assertVisible:
+    id: "android:id/content"
+- tapOn:
+    id: "io.gosats:id/awesome"
+- assertVisible: "Elite Card"
+- assertVisible: "Exclusive access to SatsPay  for merchant UPI payments."
+- assertVisible:
+    text: "Free Physical Card"
+    index: 1
+- assertVisible: "Get 1.5% Gold & Bitcoin\nRewards On Every Spend"
+- assertVisible: "Redeemption of rewards For Vouchers, Bill Payments & More."
+- assertVisible: "Upto 15% Rewards  On Flipkart, Zomato, Amazon Prime."
+- assertVisible: "Withdraw to any BTC address."
+- assertVisible:
+    id: "android:id/content"
+- swipe:
+    start: "43%,86%"
+    end: "56%,44%"
+    duration: 828
+- assertVisible: "Upgrade To Elite for ₹999"
+- assertVisible: "Get Physical Card"
+- tapOn:
+    point: "88%,84%"
+- tapOn:
+    id: "io.gosats:id/get_physical card for ₹399"
+- assertVisible:
+    id: "android:id/content"
+- assertVisible: "Pay ₹399 + GST"
+- assertVisible: "Do you have a coupon code?"
+- assertVisible: "Intro Physical Card Membership"
+- assertVisible: "Total"
+- tapOn:
+    id: "io.gosats:id/pay_₹#{{amountpayable}} + gst"
+- assertVisible: "Debit/Credit Cards"
+- assertVisible: "Other Payment Options"
+- assertVisible: "PhonePe"
+- assertVisible: "Paytm"
+- assertVisible: "Google Pay"
+- assertVisible: "Select Your Payment Method"
+- assertVisible: "Add Money to Card"
+- tapOn:
+    point: "10%,7%"
+- tapOn:
+    point: "10%,7%"
+- swipe:
+    start: "51%,41%"
+    end: "46%,84%"
+    duration: 964
+- tapOn:
+    point: "88%,21%"
+- tapOn:
+    id: "io.gosats:id/upgrade_to elite for ₹999"
+- tapOn:
+    point: "90%,56%"
+- tapOn:
+    id: "io.gosats:id/pay_₹#{{amountpayable}} + gst"
+- assertVisible: "Debit/Credit Cards"
+- assertVisible:
+    id: "android:id/content"
+- tapOn:
+    point: "10%,7%"
+- tapOn:
+    point: "10%,7%"
+- tapOn:
+    point: "10%,7%"
+- assertVisible:
+    id: "android:id/content"
+- swipe:
+    start: "44%,70%"
+    end: "52%,23%"
+    duration: 1479
+- swipe:
+    start: "44%,70%"
+    end: "47%,52%"
+    duration: 4486
+- assertVisible:
+    id: "android:id/content"
+- assertVisible: "Pay Your Bills"
+- assertVisible: "View All"
+- swipe:
+    start: "39%,85%"
+    end: "43%,33%"
+    duration: 1454
+- swipe:
+    direction: "LEFT"
+    duration: 4000
+- assertVisible: "Top Brands"
+- swipe:
+    start: "50%,68%"
+    end: "58%,44%"
+    duration: 4020
+- assertVisible: "Most Used Brands"
+- swipe:
+    start: "54%,73%"
+    end: "58%,52%"
+    duration: 1101
+- swipe:
+    start: "40%,80%"
+    end: "44%,22%"
+    duration: 1190
+- assertVisible: "Categories"
+- assertVisible: "Our Picks"

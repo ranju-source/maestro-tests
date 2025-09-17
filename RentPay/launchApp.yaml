@@ -1,0 +1,56 @@
+appId: io.gosats
+---
+# - launchApp: 
+#     appId: "io.gosats"
+- tapOn:
+    id: "io.gosats:id/let’s_get started"
+- tapOn: "Enter Mobile Number"
+- inputText: "9090909090"
+- tapOn: "io.gosats:id/get_otp"
+- tapOn:
+    point: "15%,28%"
+- inputText: "1234"
+- swipe:
+    start: "47%,80%"
+    end: "49%,51%"
+    duration: 1052
+- tapOn:
+    id: "io.gosats:id/pay_now"
+- tapOn:
+    point: "19%,53%"
+- tapOn:
+    id: "io.gosats:id/enter_payee name"
+- inputText: "Karan"
+- tapOn:
+    id: "io.gosats:id/search_with upi id"
+- inputText: "karan@axl"
+- tapOn:
+    id: "io.gosats:id/next"
+- tapOn: "Karan"
+- tapOn:
+    id: "io.gosats:id/abcpr1234f"
+- inputText: "QWERTYUIOP"
+- tapOn:
+    id: "io.gosats:id/confirm"
+- tapOn:
+    id: "io.gosats:id/10000"
+- inputText: "300"
+- tapOn:
+    point: "50%,91%"
+- tapOn: "Debit/Credit Cards"
+- tapOn: "Net Banking"
+- tapOn:
+    text: "bank"
+    index: 0
+- tapOn: "PAY NOW"
+- tapOn: "Submit Form"
+- tapOn:
+    id: "io.gosats:id/hooray"
+- assertVisible:
+    id: "android:id/content"
+- "back"
+- tapOn:
+    point: "90%,7%"
+- tapOn: "Logout"
+- tapOn:
+    id: "io.gosats:id/confirm_logout"

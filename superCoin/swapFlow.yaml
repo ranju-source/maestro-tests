@@ -1,0 +1,57 @@
+appId: io.gosats
+---
+# - tapOn:
+#     id: "io.gosats:id/let’s_get started"
+# - tapOn:
+#     id: "io.gosats:id/enter_mobile_number"
+# - inputText: "9980406722"
+# - tapOn:
+#     id: "io.gosats:id/get_otp"
+# - inputText: "0800"
+- tapOn: "Wallet"
+- tapOn: "Swap Flipkart Supercoins"
+- tapOn:
+    point: "89%,22%"
+- assertVisible: "Sats"
+- assertVisible: "Gold Rewards"
+- assertVisible: "Supercoins"
+- tapOn: "Supercoins"
+- assertVisible: "min: 2"
+- tapOn: "min: 2"
+- inputText: "23"
+- tapOn:
+    id: "io.gosats:id/swap_supercoin to sats"
+- assertVisible:
+    id: "io.gosats:id/swap_supercoin to sats"
+    enabled: false
+- tapOn:
+    point: "86%,22%"
+- tapOn:
+    point: "88%,22%"
+- tapOn:
+    point: "65%,33%"
+- tapOn:
+    point: "19%,22%"
+- tapOn:
+    point: "49%,64%"
+- tapOn:
+    point: "47%,72%"
+- swipe:
+    start: "59%,27%"
+    end: "49%,82%"
+    duration: 600
+- tapOn:
+    point: "91%,8%"
+- tapOn:
+    point: "22%,93%"
+- tapOn:
+    point: "57%,57%"
+- tapOn:
+    point: "36%,93%"
+- tapOn:
+    point: "64%,24%"
+- tapOn:
+    point: "40%,24%"
+- inputText: "8210533060"
+- tapOn:
+    id: "io.gosats:id/get_otp"

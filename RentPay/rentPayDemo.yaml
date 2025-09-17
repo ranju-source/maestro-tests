@@ -1,0 +1,309 @@
+appId: io.gosats
+---
+
+# - tapOn:
+#     text: "GoSats"
+#     index: 1
+# - tapOn:
+#     id: "io.gosats:id/let’s_get started"
+# - tapOn:
+#     id: "io.gosats:id/enter_mobile_number"
+# - inputText: "9980406722"
+# - tapOn:
+#     id: "io.gosats:id/get_otp"
+# - inputText: "7206"
+- swipe:
+    start: "50%,81%"
+    end: "57%,32%" 
+    duration: 1151
+- swipe:
+    start: "50%,85%"
+    end: "59%,46%"
+    duration: 1250
+- assertVisible:
+   id: io.gosats:id/pay
+- assertVisible: Unlock exclusive rewards and offers with your GoSats card.
+- assertVisible: Pay expenses with SatX
+- tapOn:
+   id: io.gosats:id/pay
+- tapOn:
+    text: "House Rent"
+    index: 1
+- inputText: "8880407722"
+- tapOn:
+    id: "io.gosats:id/enter_payee name"
+- inputText: Jerry
+- tapOn:
+   id: io.gosats:id/search_with upi id
+- inputText: tomzz@ybl
+- tapOn:
+   id: io.gosats:id/next
+- tapOn:
+   id: io.gosats:id/abcpr1234f
+- inputText: CKBPR6045C
+- tapOn:
+   id: io.gosats:id/confirm
+- tapOn:
+    id: "io.gosats:id/10000"
+- inputText: "8000"
+- tapOn:
+    id: "io.gosats:id/pay_₹8000"
+- tapOn:
+    id: "io.gosats:id/pay_₹8000"
+- tapOn: "Debit/Credit Cards, 2% Fee + GST"
+- tapOn: "Net Banking"
+- tapOn:
+    point: "15%,59%"
+- tapOn: "PAY NOW"
+- tapOn: "Submit Form"
+# - assertVisible: "You have successfully paid ₹8189 to Mahendra Singh Dhoni"
+- tapOn:
+    id: "io.gosats:id/awesome"
+- back
+- tapOn:
+   id: io.gosats:id/awesome
+- back
+- tapOn:
+   point: 10%,93%
+- tapOn:
+   id: io.gosats:id/pay
+- tapOn:
+   point: 19%,35%
+- swipe:
+   start: 49%,60%
+   end: 50%,25%
+   duration: 1517
+- tapOn: R, ranj, August 6, 2025, ₹200, Pay again
+- tapOn:
+   id: io.gosats:id/10000
+- inputText: "2000"
+- tapOn:
+   id: io.gosats:id/pay_₹2000
+- tapOn: Debit/Credit Cards, 2% Fee + GST
+- tapOn: Net Banking
+- tapOn:
+   point: 48%,59%
+- tapOn: PAY NOW
+- tapOn: Submit Form
+- tapOn:
+   id: io.gosats:id/awesome
+- back
+#sample
+- tapOn:
+   point: 11%,9%
+- tapOn:
+   point: 10%,93%
+- tapOn:
+   id: io.gosats:id/pay
+- tapOn:
+   point: 19%,35%
+- swipe:
+   start: 52%,60%
+   end: 53%,32%
+   duration: 983
+- tapOn: R, ranj, August 6, 2025, ₹200, Pay again
+- tapOn:
+    id: "io.gosats:id/10000"
+- inputText: "300"
+- tapOn:
+    id: "io.gosats:id/pay_₹300"
+- tapOn:
+    text: "House Rent"
+    index: 1
+- assertVisible: "Enter Payee Name"
+- tapOn: "Enter Payee Name"
+- inputRandomText: 
+     length: 3
+- eraseText
+- inputRandomText: 
+    length: 3
+- tapOn: "Search with UPI ID"
+- inputRandomText: 
+    length: 3
+- tapOn: "Search with UPI ID"
+- inputText: "@pnb"
+- assertVisible: "io.gosats:id/next"
+- tapOn:
+    id: "io.gosats:id/next"
+- tapOn:
+    point: "50%,24%"
+- tapOn: "ABCPR1234F"
+- inputText: "ASDFGHJKL"
+- tapOn:
+    id: "io.gosats:id/confirm"
+- tapOn: "ABCPR1234F"
+- eraseText
+- inputText: "CKBPR6048C"
+- tapOn:
+    id: "io.gosats:id/confirm"
+- assertVisible: "Enter Amount"
+- assertVisible:
+    id: "io.gosats:id/10000"
+- tapOn:
+    id: "io.gosats:id/10000"
+- inputRandomNumber:
+    length: 4
+- tapOn:
+    point: "50%,91%"
+- tapOn: "Debit/Credit Cards"
+- tapOn: "Net Banking"
+- tapOn:
+    text: "bank"
+    index: 4
+- tapOn:
+    point: "44%,95%"
+- tapOn: "Submit Form"
+- tapOn:
+   id: io.gosats:id/awesome
+- assertVisible:
+    id: "android:id/content"
+- assertVisible: "Payment Method"
+- assertVisible: "Freecharge PG"
+- assertVisible: "Status"
+- assertVisible: "Completed"
+- tapOn:
+    point: "10%,7%"
+- "back"
+# - swipe:
+#     start: "47%,83%"
+#     end: "47%,34%"
+#     duration: 747
+- assertVisible:
+   id: io.gosats:id/pay
+- assertVisible: Unlock exclusive rewards and offers with your GoSats card.
+- assertVisible: Pay expenses with SatX
+- tapOn:
+   id: io.gosats:id/pay
+- tapOn:
+    text: "Token Amount"
+    index: 1
+- tapOn:
+    text: "Enter Payee Name"
+    index: 1
+- inputText: "Jhon"
+- tapOn:
+    id: "io.gosats:id/search_with upi id"
+- inputText: "jhon@randomly"
+- tapOn:
+    id: "io.gosats:id/next"
+- assertVisible: "Wrong UPI address"
+- assertTrue:
+    condition: "${true}"
+    label: "Wrong UPI address"
+- tapOn: "Search with UPI ID"
+- "eraseText"
+- inputRandomNumber:
+    length: 6
+- tapOn:
+    id: "io.gosats:id/next"
+- assertTrue:
+    condition: "${true}"
+    label: "Invalid UPI id"
+# - assertVisible: "Wrong UPI address"
+- tapOn:
+    id: "io.gosats:id/search_with upi id"
+- "eraseText"
+- inputText: "#@$%!"
+- tapOn:
+    id: "io.gosats:id/next"
+- tapOn:
+    id: "io.gosats:id/search_with upi id"
+- "eraseText"
+- tapOn:
+    id: "io.gosats:id/search_with upi id"
+- inputText: "jhon@axl"
+- tapOn:
+    id: "io.gosats:id/next"
+# - tapOn:
+#     id: "io.gosats:id/abcpr1234f"
+# - inputRandomText:
+#     length: 8
+# - tapOn:
+#     id: "io.gosats:id/confirm"
+- tapOn:
+    id: "io.gosats:id/10000"
+- inputRandomText:
+    length: 3
+- tapOn:
+    point: "50%,92%"
+- assertTrue:
+    condition: "${true}"
+    label: "Invalid Amount"
+- tapOn:
+    id: "io.gosats:id/10000"
+- "eraseText"
+- inputRandomNumber:
+    length: 3
+- tapOn:
+    point: "50%,92%"
+- swipe:
+    start: "44%,45%"
+    end: "37%,11%"
+    duration: 1334
+- tapOn:
+    id: "io.gosats:id/pay_by card"
+- inputText: "8784"
+- takeScreenshot: "MainScreen"
+- assertVisible: "OTP is not valid"
+- "back"
+- tapOn:
+    id: "io.gosats:id/10000"
+- "eraseText"
+- inputRandomNumber:
+    length: 3
+- tapOn:
+    point: "50%,91%"
+- tapOn:
+    id: "io.gosats:id/pay_by card"
+- inputRandomNumber:
+    length: 4
+- assertVisible: "OTP is not valid"
+- "back"
+- tapOn:
+    point: "50%,91%"
+- tapOn: "Debit/Credit Cards"
+- tapOn: "Net Banking"
+- tapOn:
+    text: "bank"
+    index: 0
+- tapOn: "PAY NOW"
+- assertVisible: " FAILURE"
+- tapOn:
+    point: 72%,20%
+- tapOn: Submit Form
+- assertVisible: "Payment Failed"
+- assertVisible: "There was some problem with the payment. Please try again later!"
+- tapOn:
+    id: "io.gosats:id/retry_payment"
+- tapOn:
+    text: "School Fee"
+    index: 1
+- inputText: "Jhon"
+- tapOn:
+    id: "io.gosats:id/search_with upi id"
+- inputText: "jhon@kmbl"
+- tapOn: "jhon"
+- tapOn:
+   id: "io.gosats:id/next"
+- inputText: "asdfgh"
+- tapOn:
+    point: "50%,92%"
+- tapOn:
+    point: 50%,91%
+
+- eraseText
+- inputText: "200"
+- tapOn:
+   point: 50%,92%
+- tapOn: Debit/Credit Cards
+- tapOn: Net Banking
+- tapOn:
+   text: bank
+   index: 6
+- tapOn: PAY NOW
+- tapOn: Submit Form
+- assertVisible: Payment Successfull
+- tapOn:
+   id: io.gosats:id/awesome
+- assertVisible:
+   id: android:id/content

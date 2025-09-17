@@ -1,0 +1,88 @@
+appId: io.gosats
+---
+# - tapOn:
+#     id: "io.gosats:id/let’s_get started"
+# - tapOn:
+#     id: "io.gosats:id/enter_mobile_number"
+# - inputText: "9980406722"
+# - tapOn:
+#     id: "io.gosats:id/get_otp"
+# - inputText: "5662"
+- tapOn: "Wallet"
+- tapOn: "$TRUMP"
+- assertVisible: "Available $TRUMP"
+- assertVisible: "INR Value"
+- assertVisible: "Redeem options:"
+- assertVisible: "Redeem $TRUMP to purchase vouchers."
+- assertVisible: "Swap $TRUMP coin"
+- tapOn: "Buy Vouchers, Redeem $TRUMP to purchase vouchers."
+- tapOn: "5% Rewards"
+- tapOn: "₹100"
+- tapOn:
+    point: "91%,73%"
+- tapOn: "Buy Voucher"
+- tapOn: "$TRUMP"
+- assertVisible:
+    text: "Redeem $TRUMP"
+    index: 1
+- tapOn:
+    text: "Redeem $TRUMP"
+    index: 0
+- tapOn:
+    point: "9%,55%"
+- swipe:
+    start: "9%,55%"
+    end: "65%,54%"
+    duration: 3116
+- assertVisible: "The price of $TRUMP can fluctuate based on supply and demand, investor\
+    \ sentiment, regulations and other factors."
+- assertVisible: "$TRUMP amount"
+- tapOn:
+    id: "io.gosats:id/proceed_to pay"
+- tapOn: "Debit/Credit Cards"
+- tapOn: "Net Banking"
+- tapOn: "PAY NOW"
+- tapOn:
+    point: "15%,59%"
+- tapOn: "PAY NOW"
+- tapOn: "Submit Form"
+# - assertVisible: ""
+# - runFlow:
+#     when:
+#       visible:
+#         id: "io.gosats:id/hooray"
+#     commands:
+- tapOn: 
+    id: "io.gosats:id/hooray"
+- assertVisible: "Freecharge PG + $TRUMP balance"
+- "back"
+- "back"
+
+- tapOn:
+    point: "56%,55%"
+- tapOn: "₹10"
+- tapOn:
+    point: "91%,73%"
+- tapOn: "Buy Voucher"
+- swipe:
+    start: "92%,33%"
+    end: "9%,33%"
+    duration: 1584
+- swipe:
+    start: "92%,33%"
+    end: "9%,33%"
+    duration: 1817
+- tapOn:
+    point: "9%,55%"
+- swipe:
+    start: "10%,55%"
+    end: "92%,55%"
+    duration: 6050
+- assertVisible: "₹0"
+- tapOn:
+    id: "io.gosats:id/proceed_to pay"
+- tapOn:
+    id: "io.gosats:id/hooray"
+- assertVisible: "$TRUMP balance"
+- "back"
+- "back"

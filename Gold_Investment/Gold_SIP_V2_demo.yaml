@@ -1,0 +1,64 @@
+appId: io.gosats
+---
+
+- tapOn: Wallet
+- tapOn:
+   point: 71%,16%
+- tapOn:
+   point: 86%,50%
+- assertVisible: "Daily Savings of ₹100"
+- assertVisible: "The next payment is scheduled on May 1, 2025"
+- assertVisible:
+    text: "View Transactions"
+    index: 0
+- tapOn:
+    text: "View Transactions"
+    index: 0
+- assertVisible: "Investment Activity"
+- tapOn:
+    point: "81%,40%"
+- tapOn: "30, ₹100"
+- assertVisible: "View Breakdown"
+- assertVisible: "Gold Quantity"
+- assertVisible: "Gold Buy Price"
+- assertVisible: "Gold Value"
+- assertVisible: "GST (3%)"
+- swipe:
+    start: "49%,93%"
+    end: "62%,38%"
+    duration: 1667
+- assertVisible:
+    text: "SIP Type"
+    index: 1
+- assertVisible:
+    text: "DAILY"
+    index: 1
+- "back"
+- tapOn:
+    point: "70%,93%"
+- assertVisible: "Invest in Gold"
+- tapOn: "Invest in Gold"
+# - assertVisible: "{{fetchGoldPrice()}}"
+- assertVisible: "LIVE"
+- assertVisible: "Invest a Lump-sum"
+- assertVisible: "Invest a Lump-sum"
+- assertVisible: "Make a one-time investment and own gold instantly. Ideal for those\
+    \ who prefer upfront growth."
+- tapOn:
+    id: "io.gosats:id/buy_gold instantly"
+- tapOn:
+    id: "io.gosats:id/enter_amount"
+- inputText: "1500"
+- tapOn:
+    point: "87%,92%"
+- tapOn:
+    id: "io.gosats:id/invest_₹1500 in gold"
+- tapOn: "Debit/Credit Cards"
+- tapOn: "Net Banking"
+- tapOn:
+    text: "bank"
+    index: 1
+- tapOn: "PAY NOW"
+- tapOn: "Submit Form"
+- tapOn:
+    id: "io.gosats:id/okay!"

@@ -1,0 +1,40 @@
+appId: "com.android.settings"
+---
+- swipe:
+    start: "49%,75%"
+    end: "54%,19%"
+    duration: 1316
+- tapOn: Settings
+- swipe:
+    start: "49%,72%"
+    end: "55%,26%"
+    duration: 1250
+- tapOn:
+    id: com.android.settings:id/text_frame
+    index: 4
+- tapOn:
+    point: "50%,80%"
+- swipe:
+    start: "27%,65%"
+    end: "82%,65%"
+    duration: 2183
+- swipe:
+    start: "34%,86%"
+    end: "82%,86%"
+    duration: 2816
+- back
+- back
+- back
+- tapOn: GoSats
+- tapOn:
+    id: io.gosats:id/let’s_get started
+- swipe:
+    start: "51%,77%"
+    end: "60%,15%"
+    duration: 1333
+- tapOn:
+    id: io.gosats:id/enter_mobile_number
+- inputText: "9090909090"
+- tapOn:
+    id: io.gosats:id/get_otp
+- inputText: "1234"

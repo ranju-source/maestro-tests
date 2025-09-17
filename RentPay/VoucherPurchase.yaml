@@ -1,0 +1,186 @@
+appId: io.gosats
+---
+- swipe:
+    start: "44%,84%"
+    end: "46%,39%"
+    duration: 1576
+- swipe:
+    start: "44%,77%"
+    end: "49%,24%"
+    duration: 2213
+- swipe:
+    start: "44%,86%"
+    end: "51%,37%"
+    duration: 1575
+- swipe:
+    start: "44%,86%"
+    end: "49%,39%"
+    duration: 14778
+- tapOn:
+    point: "56%,34%"
+- assertVisible:
+    id: "android:id/content"
+- assertVisible: "Details"
+- assertVisible: "Get Elite Card For 2X Rewards Now!"
+- assertVisible: "Earn 5% Rewards on voucher purchase"
+- assertVisible: "Please select denomination"
+- assertVisible: "Uber Test"
+- swipe:
+    start: "78%,60%"
+    end: "21%,60%"
+    duration: 5586
+- swipe:
+    start: "78%,60%"
+    end: "2%,60%"
+    duration: 24178
+- swipe:
+    start: "78%,60%"
+    end: "22%,58%"
+    duration: 58236
+- swipe:
+    start: "9%,58%"
+    end: "77%,57%"
+    duration: 2227
+- swipe:
+    start: "9%,58%"
+    end: "93%,58%"
+    duration: 10722
+- tapOn: "₹100"
+- tapOn: "Buy Voucher"
+- tapOn: "Debit/Credit Cards"
+- tapOn: "Net Banking"
+- tapOn:
+    text: "bank"
+    index: 1
+- tapOn: "PAY NOW"
+- tapOn:
+    point: "53%,23%"
+- assertVisible:
+    id: "android:id/content"
+- assertVisible: "You missed upto 2X rewards on this spend. Get Elite card now!"
+- assertVisible: "Share with your friends and earn more!"
+- assertVisible: "Share"
+- tapOn:
+    id: "io.gosats:id/hooray"
+- assertVisible: "Payment Method"
+- assertVisible: "Freecharge PG"
+- assertVisible: "Date & Time"
+- assertVisible: "Redeem Voucher"
+- assertVisible: "Sats Earned"
+- assertVisible: "Status"
+- assertVisible: "Transaction Details "
+- assertVisible: "Voucher Code"
+- assertVisible: "Voucher Pin"
+- assertVisible:
+    id: "android:id/content"
+- tapOn: "Redeem Voucher"
+- assertVisible:
+    id: "com.android.chrome:id/url_bar"
+- swipe:
+    start: "44%,84%"
+    end: "46%,39%"
+    duration: 1576
+- swipe:
+    start: "44%,77%"
+    end: "49%,24%"
+    duration: 2213
+- swipe:
+    start: "44%,86%"
+    end: "51%,37%"
+    duration: 1575
+- swipe:
+    start: "44%,86%"
+    end: "49%,39%"
+    duration: 14778
+- tapOn:
+    point: "56%,34%"
+- assertVisible:
+    id: "android:id/content"
+- assertVisible: "Details"
+- assertVisible: "Get Elite Card For 2X Rewards Now!"
+- assertVisible: "Earn 5% Rewards on voucher purchase"
+- assertVisible: "Please select denomination"
+- assertVisible: "Uber Test"
+- swipe:
+    start: "78%,60%"
+    end: "21%,60%"
+    duration: 5586
+- swipe:
+    start: "78%,60%"
+    end: "2%,60%"
+    duration: 24178
+- swipe:
+    start: "78%,60%"
+    end: "22%,58%"
+    duration: 58236
+- swipe:
+    start: "9%,58%"
+    end: "77%,57%"
+    duration: 2227
+- swipe:
+    start: "9%,58%"
+    end: "93%,58%"
+    duration: 10722
+- tapOn: "₹100"
+- tapOn: "Buy Voucher"
+- tapOn: "Debit/Credit Cards"
+- tapOn: "Net Banking"
+- tapOn:
+    text: "bank"
+    index: 1
+- tapOn: "PAY NOW"
+- tapOn:
+    point: "53%,23%"
+- assertVisible:
+    id: "android:id/content"
+- assertVisible: "You missed upto 2X rewards on this spend. Get Elite card now!"
+- assertVisible: "Share with your friends and earn more!"
+- assertVisible: "Share"
+- tapOn:
+    id: "io.gosats:id/hooray"
+- assertVisible: "Payment Method"
+- assertVisible: "Freecharge PG"
+- assertVisible: "Date & Time"
+- assertVisible: "Redeem Voucher"
+- assertVisible: "Sats Earned"
+- assertVisible: "Status"
+- assertVisible: "Transaction Details "
+- assertVisible: "Voucher Code"
+- assertVisible: "Voucher Pin"
+- assertVisible:
+    id: "android:id/content"
+- tapOn: "Redeem Voucher"
+- assertVisible:
+    id: "com.android.chrome:id/url_bar"
+- swipe:
+    start: "1%,46%"
+    end: "37%,41%"
+    duration: 2203
+- tapOn:
+    point: "10%,7%"
+- tapOn:
+    text: "Home"
+    index: 1
+- tapOn:
+    point: "56%,34%"
+- tapOn: "₹10"
+- tapOn: "Buy Voucher"
+- tapOn: "Debit/Credit Cards"
+- tapOn: "Net Banking"
+- tapOn:
+    text: "bank"
+    index: 0
+- tapOn: "PAY NOW"
+- tapOn: " FAILURE"
+- tapOn:
+    point: "72%,20%"
+- tapOn: "Submit Form"
+- assertVisible: "Payment for this order has failed. Please retry with alternate payment\
+    \ method. If issue persists please contact support."
+- assertVisible: "Uh Oh!"
+- assertVisible:
+    id: "android:id/content"
+- tapOn:
+    id: "io.gosats:id/okay!"
+
+

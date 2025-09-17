@@ -1,0 +1,16 @@
+appId: io.gosats
+---
+- swipe:
+    start: "55%,98%"
+    end: "60%,75%"
+    duration: 923
+- tapOn: "Let’s Get Started"
+- assertVisible: "Enter Mobile Number"
+- assertVisible: "Enter your phone number to earn Bitcoin and Gold rewards"
+- tapOn: "Enter Mobile Number"
+- inputText: "9980406722"
+- tapOn:
+    id: "io.gosats:id/get_otp"
+- tapOn:
+    point: "15%,28%"
+- inputText: "8070"

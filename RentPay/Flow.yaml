@@ -1,0 +1,101 @@
+appId: io.gosats
+---
+- assertVisible: "Payment Method"
+- assertVisible: "Freecharge PG"
+- assertVisible: "Status"
+- assertVisible: "Completed"
+- tapOn:
+    point: "10%,7%"
+- "back"
+- tapOn: "Pay Now"
+- tapOn:
+    text: "Token Amount"
+    index: 1
+- tapOn:
+    text: "Enter Payee Name"
+    index: 1
+- inputText: "Jhon"
+- tapOn:
+    id: "io.gosats:id/search_with upi id"
+- inputRandomText:
+    length: 6
+- tapOn:
+    id: "io.gosats:id/next"
+- assertVisible: "Wrong UPI address"
+- assertTrue:
+    condition: "${false}"
+    label: "Wrong UPI address"
+- tapOn: "Search with UPI ID"
+- "eraseText"
+- inputRandomNumber:
+    length: 6
+- tapOn:
+    id: "io.gosats:id/next"
+- assertTrue:
+    condition: "${false}"
+    label: "Wrong UPI address"
+- assertVisible: "Wrong UPI address"
+- tapOn:
+    id: "io.gosats:id/search_with upi id"
+- "eraseText"
+- inputText: "#@$%!"
+- tapOn:
+    id: "io.gosats:id/next"
+- tapOn: "Wrong UPI address"
+- tapOn:
+    id: "io.gosats:id/search_with upi id"
+- "eraseText"
+- tapOn:
+    id: "io.gosats:id/search_with upi id"
+- inputText: "jhon@axl"
+- tapOn:
+    id: "io.gosats:id/next"
+- tapOn:
+    id: "io.gosats:id/abcpr1234f"
+- inputRandomText:
+    length: 8
+- tapOn:
+    id: "io.gosats:id/confirm"
+- tapOn:
+    id: "io.gosats:id/10000"
+- inputRandomText:
+    length: 3
+- tapOn:
+    id: "io.gosats:id/pay_₹adz"
+- swipe:
+    start: "44%,45%"
+    end: "37%,11%"
+    duration: 1334
+- tapOn:
+    id: "io.gosats:id/pay_by card"
+- inputText: "8784"
+- takeScreenshot: "MainScreen"
+- assertVisible: "Misssing required data to call external api"
+- tapOn:
+    id: "io.gosats:id/10000"
+- "eraseText"
+- inputRandomNumber:
+    length: 3
+- tapOn:
+    id: "io.gosats:id/pay_₹241"
+- tapOn:
+    id: "io.gosats:id/pay_by card"
+- inputRandomNumber:
+    length: 4
+- assertVisible: "OTP is not valid"
+- "back"
+- tapOn:
+    id: "io.gosats:id/pay_₹241"
+- tapOn: "Debit/Credit Cards"
+- tapOn: "Net Banking"
+- tapOn:
+    text: "bank"
+    index: 0
+- tapOn: "PAY NOW"
+- tapOn:
+    point: "72%,20%"
+- tapOn: "Submit Form"
+- assertVisible: "Payment for this order has failed. Please retry with alternate payment\
+    \ method. If issue persists please contact support."
+- tapOn:
+    id: "io.gosats:id/okay!"

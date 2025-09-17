@@ -1,0 +1,150 @@
+appId: io.gosats
+---
+- tapOn:
+    id: "io.gosats:id/let’s_get started"
+- tapOn:
+    id: "io.gosats:id/enter_mobile_number"
+- inputText: "9090909090"
+- tapOn:
+    id: "io.gosats:id/get_otp"
+- inputText: "1234"
+- swipe:
+   start: 50%,84%
+   end: 80%,6%
+   duration: 1417
+- tapOn:
+    point: "50%,32%"
+- assertVisible: "Daily savings in gold can give you a big return!"
+- assertVisible: "Build Wealth in Gold."
+- assertVisible: "Invest a small amount each day and watch your savings accumulate."
+- assertVisible: "Transparent Tracking."
+- assertVisible: "Upto 10% cashback on Swiggy, Myntra and PVR vouchers."
+- assertVisible: "Automatic & Flexible."
+- assertVisible: "View your gold balance anytime with real-time updates."
+- tapOn:
+    id: "io.gosats:id/start_daily gold savings"
+- swipe:
+   start: 89%,28%
+   end: 7%,29%
+   duration: 1567
+- swipe:
+   start: 89%,28%
+   end: 7%,29%
+   duration: 1567
+- swipe:
+   start: 76%,26%
+   end: 35%,24%
+   duration: 1133
+- tapOn:
+    point: "50%,37%"
+- tapOn:
+    point: "53%,37%"
+- tapOn:
+    point: "50%,64%"
+- tapOn: "Invest ₹100 Daily"
+- tapOn: "Debit/Credit Cards"
+- tapOn: "Net Banking"
+- tapOn:
+    text: "bank"
+    index: 1
+- assertVisible: "PAY NOW"
+- tapOn: "PAY NOW"
+- tapOn:
+    point: "72%,21%"
+- assertVisible: "Submit Form"
+- tapOn: "Submit Form"
+- runFlow:
+    when:
+      visible: "Share with your friends and earn more!"
+    commands:
+        - tapOn:
+            id: "io.gosats:id/hooray"
+- runFlow:
+   when:
+     visible: "Payment for this order has failed. Please retry with alternate payment method. If issue persists please contact support."
+   commands: 
+    - tapOn:
+        id: "io.gosats:id/okay!"
+- tapOn:
+    point: "50%,31%"
+- tapOn:
+   id: "io.gosats:id/start_daily gold savings"
+- tapOn:
+   point: "50%,64%"
+- assertVisible: "Automatically saves your money in 24k gold, every day."
+- assertVisible: "Enter SIP Amount"
+- assertVisible: "₹"
+- tapOn: "View History"
+- tapOn:
+   point: "50%,64%"
+- tapOn:
+   point: "11%,9%"
+- back
+- tapOn:
+   id: "io.gosats:id/continue"
+- tapOn: "Debit/Credit Cards"
+- runFlow:
+    when: 
+      visible: "Session Expired"
+    commands:
+      - back
+- tapOn:
+   point: "19%,73%"
+- tapOn:
+   point: "19%,73%"
+- tapOn: "PAY NOW"
+- tapOn: "Submit Form"
+# - extendedWaitUntil:
+#     visible: "Your purchase has been received! Hold tight, while we process your voucher." 
+#     timeout: 3000
+# - extendedWaitUntil:
+#     visible: "android:id/content" 
+#     timeout: 3000
+- runFlow:
+    when:
+       visible: "Share with your friends and earn more!" 
+    commands:
+       - tapOn:
+            id: "io.gosats:id/hooray"
+- runFlow:
+    when:
+       visible: "on your Uber Test voucher purchase"
+    commands:
+       - tapOn:
+            id: "io.gosats:id/hooray"
+- assertVisible:
+   id: "android:id/content"
+- tapOn:
+   point: 11%,9%
+- back
+- tapOn:
+   point: 50%,76%
+- back
+- back
+- tapOn:
+    point: "50%,34%"
+- tapOn:
+    id: "io.gosats:id/start_daily gold savings"
+- tapOn:
+   id: io.gosats:id/enter_amount
+- inputText: ranjitha
+- eraseText
+- tapOn:
+   id: io.gosats:id/enter_amount
+- inputRandomNumber:
+   length: 3
+- repeat:
+    times: 3
+    commands:
+      - tapOn: 
+          id: "io.gosats:id/continue"
+- back
+
+
+
+
+
+
+
+
+

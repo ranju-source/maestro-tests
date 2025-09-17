@@ -1,0 +1,41 @@
+appId: io.gosats
+---
+- tapOn:
+    text: "GoSats"
+    index: 1
+- tapOn:
+    id: "io.gosats:id/let’s_get started"
+- tapOn:
+    id: "io.gosats:id/enter_mobile_number"
+- inputText: "9980406722"
+- tapOn:
+    id: "io.gosats:id/get_otp"
+- inputText: "7206"
+- swipe:
+    start: "50%,81%"
+    end: "57%,32%"
+    duration: 1151
+- swipe:
+    start: "50%,85%"
+    end: "59%,46%"
+    duration: 1250
+- tapOn: "Pay"
+- tapOn:
+    point: "19%,35%"
+- inputText: "9980406722"
+- tapOn: "M, Mahendra Singh Dhoni, 2266657824@ptsbi, Pay"
+- tapOn:
+    id: "io.gosats:id/10000"
+- inputText: "8000"
+- tapOn:
+    id: "io.gosats:id/pay_₹8000"
+- tapOn:
+    id: "io.gosats:id/pay_₹8000"
+- tapOn: "Net Banking"
+- tapOn:
+    point: "15%,59%"
+- tapOn: "PAY NOW"
+- tapOn: "Submit Form"
+- assertVisible: "You have successfully paid ₹8189 to Mahendra Singh Dhoni"
+- tapOn:
+    id: "io.gosats:id/awesome"

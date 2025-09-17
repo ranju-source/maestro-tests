@@ -1,0 +1,56 @@
+appId: io.gosats
+---
+- tapOn:
+    id: "io.gosats:id/let’s_get started"
+- tapOn:
+    id: "io.gosats:id/enter_mobile_number"
+- assertVisible: "Enter Mobile Number"
+- assertVisible: "Enter your phone number to earn Bitcoin and Gold rewards"
+- assertVisible: "(+91)"
+- inputText: "9090909090"
+- tapOn:
+    id: "io.gosats:id/get_otp"
+- assertVisible: "Please enter the OTP code below to complete verification"
+- inputText: "1234"
+- assertVisible:
+    id: "io.gosats:id/next"
+- assertVisible: "Good Morning, "
+- tapOn: "GOLD"
+- assertVisible:
+    id: "android:id/content"
+- swipe:
+    start: "49%,75%"
+    end: "49%,40%"
+    duration: 835
+- assertVisible: "Pay expenses with SatX"
+- tapOn: "Pay Now"
+- assertVisible: "Cover everything with your credit card."
+- assertVisible:
+    id: "android:id/content"
+- tapOn:
+    point: "19%,75%"
+- tapOn:
+    point: "87%,21%"
+- tapOn:
+    id: "io.gosats:id/grant_camera permission"
+- tapOn: "While using the app"
+- assertVisible:
+    id: "android:id/content"
+- tapOn:
+    point: "10%,7%"
+- tapOn: "Search with UPI ID"
+- inputText: "ranjitha@paytm"
+- tapOn:
+    id: "io.gosats:id/confirm"
+- tapOn:
+    id: "io.gosats:id/abcpr1234f"
+- inputText: "abcdefghij"
+- tapOn:
+    id: "io.gosats:id/confirm"
+- assertVisible: "Something went wrong, please try again later"
+- tapOn:
+    point: "10%,7%"
+- tapOn:
+    point: "10%,7%"
+- tapOn:
+    point: "10%,7%"

@@ -1,0 +1,24 @@
+appId: io.gosats
+---
+- swipe:
+    start: "79%,36%"
+    end: "29%,36%"
+    duration: 1166
+- tapOn:
+    point: "44%,33%"
+- tapOn: "Redeem Description"
+- tapOn:
+    point: "92%,66%"
+- assertVisible: "• Link it with your PhonePe account via My Profile> All payment\
+    \ methods> PhonePe Gift Card> Claim now."
+- assertVisible: "• Enter the gift card number and PIN to add the Gift Card to your\
+    \ balance."
+- tapOn:
+    point: "92%,66%"
+- tapOn: "Pay At PhonePe Merchant Using Vouchers"
+- tapOn: "₹35"
+- tapOn: "Buy Voucher"
+- tapOn: "Google Pay"
+- extendedWaitUntil:
+    visible: "You do not have a UPI Apps installed, kindly install any of the top"
+    timeout: 10000

@@ -1,0 +1,30 @@
+appId: io.gosats
+---
+
+- tapOn: "Let’s Get Started"
+- tapOn: "Enter Mobile Number"
+- inputText: "9090909090"
+- tapOn:
+    id: "io.gosats:id/get_otp"
+- inputText: 1234
+# - assertVisible: "GoodAfternoon,Super"
+- swipe:
+    start: "49%,77%"
+    end: "55%,29%"
+    duration: 819
+- tapOn: "Pay Now"
+- assertVisible: "Cover everything with your credit card."
+- tapOn:
+    point: "19%,75%"
+- tapOn:
+    id: "io.gosats:id/search_with upi id"
+- inputText: "ranjithapoojari@ybl"
+- tapOn:
+    id: "io.gosats:id/confirm"
+- tapOn:
+    id: "io.gosats:id/abcpr1234f"
+- inputText: "CKBPR6048C"
+- tapOn:
+    id: "io.gosats:id/confirm"
+- assertVisible: "The ID is already used in another account. Please try a different\
+    \ one."
