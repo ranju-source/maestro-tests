@@ -1,0 +1,27 @@
+appId: io.gosats
+env:
+  PhoneNumber: '9090909090'
+  OTP: '1234'
+---
+- launchApp:
+    clearState: true
+
+#------ Login ----- 
+
+- tapOn:
+    id: io.gosats:id/let’s_get started
+- tapOn:
+    id: io.gosats:id/enter_mobile_number
+- inputText: ${PhoneNumber}
+- tapOn:
+    id: io.gosats:id/get_otp
+- inputText: ${OTP}
+
+#--- Supercoin Activation Flow ----
+- tapOn: Wallet
+- tapOn: Swap Flipkart Supercoins, Activate to see the Supercoins balance.
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: Activate My Supercoins
+- assertNotVisible: Uh oh, something went wrong!
+- back

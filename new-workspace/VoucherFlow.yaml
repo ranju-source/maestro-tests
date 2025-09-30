@@ -1,0 +1,48 @@
+appId: io.gosats
+env:
+  PhoneNumber: '9090909090'
+  OTP: '1234'
+---
+- launchApp:
+    clearState: true
+
+- tapOn:
+    id: io.gosats:id/let’s_get started
+- tapOn:
+    id: io.gosats:id/enter_mobile_number
+- inputText: ${PhoneNumber}
+- tapOn:
+    id: io.gosats:id/get_otp
+- inputText: ${OTP}
+- waitForAnimationToEnd:
+    timeout: 5000
+
+- tapOn: Brands
+- extendedWaitUntil:
+    visible: Categories
+    timeout: 10000
+- tapOn:
+    point: 54%,25%
+- waitForAnimationToEnd
+- tapOn: ₹100
+- tapOn:
+    point: 87%,74%
+- tapOn: Buy Voucher
+- tapOn:
+    point: 29%,43%
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: The price of Bitcoin can fluctuate based on supply and demand, investor sentiment, regulations and other factors.
+- inputText: '3'
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: io.gosats:id/done
+- tapOn: io.gosats:id/proceed_to pay
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: Debit/Credit Cards, Pay with any UPI App or CC or DC
+- tapOn: io.gosats:id/proceed_to pay
+
+- tapOn:
+    text: Proceed to Pay
+    index: -1

@@ -1,0 +1,44 @@
+appId: io.gosats
+env:
+  PhoneNumber: '9090909090'
+  OTP: '1234'
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: io.gosats:id/let’s_get started
+- tapOn:
+    id: io.gosats:id/enter_mobile_number
+- inputText: ${PhoneNumber}
+- tapOn:
+    id: io.gosats:id/get_otp
+- inputText: ${OTP}
+
+- scrollUntilVisible:
+    element: pay your bills
+- tapOn: Water
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: MCGM Water Department MCGM Water Department 1234567890 Last paid on Sep 18, 2025
+- waitForAnimationToEnd
+- tapOn:
+    id: editable-amount
+- eraseText
+- inputText: '200'
+- tapOn: Proceed
+- waitForAnimationToEnd
+- tapOn:
+    point: 27%,45%
+- tapOn: The price of Bitcoin can fluctuate based on supply and demand, investor sentiment, regulations and other factors.
+- inputText: '50'
+- tapOn: io.gosats:id/done
+- tapOn: io.gosats:id/redeem_sats & pay
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: Debit/Credit Cards, Pay with any UPI App or CC or DC
+- tapOn: Payment Summary
+- tapOn: Pay using testsuccess@gocash
+- waitForAnimationToEnd
+- waitForAnimationToEnd:
+    timeout: 50000
+- back

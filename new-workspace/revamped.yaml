@@ -1,0 +1,99 @@
+appId: io.gosats
+env:
+  PhoneNumber: '9090909090'
+  OTP: '1234'
+  userName: 'Bugss'
+---
+- launchApp:
+    clearState: true
+
+#--------- Login -----------
+- tapOn:
+    id: io.gosats:id/let’s_get started
+- tapOn:
+    id: io.gosats:id/enter_mobile_number
+- inputText: ${PhoneNumber}
+- tapOn:
+    id: io.gosats:id/get_otp
+- inputText: ${OTP}
+- assertVisible: Rewards Breakdown
+
+#------------ Revamped Home Screen : Assertion’s ---------------
+# - assertVisible: 'Good Afternoon, Bugss'
+
+- assertVisible: ${userName}
+- assertVisible:
+    text: Rewards Breakdown
+    enabled: true
+- assertVisible:
+    text: Total Rewards
+    enabled: true
+- assertVisible:
+    id: campaign-image
+
+#-------- Functionality Test : card details page ----------------------
+- tapOn:
+    id: show-card-details-button
+# - repeat:
+#     while:
+#       notVisible: Card Details
+#     commands:
+#       - tapOn: show-card-details-button
+- assertVisible:
+    text: Card Number
+    enabled: true
+- assertVisible:
+    text: Expiry On
+    enabled: true
+- tapOn:
+    text: 'lock'
+    waitToSettleTimeoutMs: 500
+- assertVisible:
+    text: CVV
+    enabled: true
+- tapOn:
+    text: 'Lock'
+    waitToSettleTimeoutMs: 500
+- assertVisible:
+    text: CVV
+    enabled: false
+- assertTrue: cardBalance
+- tapOn:
+    id: addMoney
+
+#-------------------- Card Activation Flow ---------------
+# - tapOn:
+#     id: Get Physical Card
+# - runFlow:
+#     file: cardActivation.yaml
+#     env:
+#       MY_PARAMETER: ${PhoneNumber}, ${OTP}
+
+#--------------------- Card Settings Flow ---------------------
+# - tapOn:
+#     id: card/settings
+# - assertVisible:
+#     id: POS
+# - assertVisible:
+#     id: lock
+# - assertVisible:
+#     id: setPin
+# - assertVisible:
+#     id: Enable tap
+# - tapOn:
+#     text: 'POS'
+#     waitToSettleTimeoutMs: 500
+# - tapOn:
+#     text: 'SetPin'
+#     waitToSettleTimeoutMs: 500
+# - tapOn:
+#     text: 'Enable Tap'
+#     waitToSettleTimeoutMs: 500
+
+# - tapOn:
+#     text: '@yesbank'
+#     point: 90%,50%
+
+# - assertTrue: Total Rewrads {combination of rewards}
+# - assertVisible:
+#     id: someId

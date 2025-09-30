@@ -1,0 +1,81 @@
+appId: io.gosats
+env:
+  PhoneNumber: '8080808080'
+  OTP: '1234'
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: io.gosats:id/let’s_get started
+- tapOn:
+    id: io.gosats:id/enter_mobile_number
+- inputText: ${PhoneNumber}
+- tapOn:
+    id: io.gosats:id/get_otp
+- inputText: ${OTP}
+- tapOn:
+    id: Homepage VCO Inflow
+- tapOn:
+    id: enter_your pan card number
+- inputText: 'ckbpr6049c'
+- tapOn:
+    point: 19%,45%
+- inputText: '11111111'
+- tapOn: io.gosats:id/continue
+- extendedWaitUntil:
+    visible: Confirm Your PAN Details
+    timeout: 10000
+- tapOn: io.gosats:id/continue
+- tapOn: Flat / House no / Floor / Building
+- inputText: Hello World
+- tapOn: Area / Sector / Locality
+- inputRandomText:
+    length: 10
+- tapOn: Nearby Landmark (Optional)
+- inputRandomText:
+    length: 10
+- tapOn: Pincode
+- inputText: '560035'
+- tapOn: io.gosats:id/confirm_address
+- tapOn:
+    point: 5%,22%
+- tapOn: io.gosats:id/confirm_address
+- inputText: '123456'
+- tapOn: io.gosats:id/continue
+- inputText: Hello World
+- tapOn: io.gosats:id/confirm
+- tapOn: io.gosats:id/yes
+- waitForAnimationToEnd:
+    timeout: 10000
+
+#----------------- Elite Card Upgrade Flow -----------
+- tapOn: Skip
+- tapOn: io.gosats:id/upgrade_to elite for ₹699
+- assertVisible: Pay ₹699 + ₹125.82 GST
+- tapOn: io.gosats:id/pay_₹#{{amountpayable}} + ₹125.82 gst
+- tapOn: Debit/Credit Cards
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: Net Banking
+- tapOn:
+    point: 44%,56%
+- tapOn: PAY NOW
+- tapOn: Submit Form
+- tapOn: Payment Successful!
+- assertVisible: Congratulations! Your card will be delivered within 15 days
+- assertVisible: Share
+- tapOn: io.gosats:id/continue
+- tapOn:
+    point: 5%,84%
+- tapOn: Confirm Details
+- tapOn: Do it Later
+
+#---------- Partial Redemptions ----------------------
+- tapOn:
+    point: 86%,51%
+- assertVisible: Pay ₹692 + ₹125.82 GST
+
+#---------- Flipkart Coin Redemptions ---------------
+- tapOn:
+    point: 86%,55%
+- assertVisible: Pay ₹692 + ₹125.82 GST
